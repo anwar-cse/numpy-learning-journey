@@ -1,0 +1,76 @@
+NumPy Introduction + Array Basics
+    
+    📌 NumPy কি?
+
+            👉 NumPy = Numerical Python
+
+            👉 এটা দিয়ে আমরা:
+
+                        Fast calculation করতে পারি
+                        Array নিয়ে কাজ করতে পারি
+                        ML এর math handle করতে পারি
+
+    📌 Install
+                pip install numpy
+
+    📌 Import
+                import numpy as np
+
+    📌 1. Array কি?
+            👉 Array = list এর advanced version (fast + powerful)
+
+    📌 List vs NumPy Array
+                            import numpy as np
+
+                            # list
+                            lst = [1, 2, 3, 4]
+
+                            # numpy array
+                            arr = np.array([1, 2, 3, 4])
+
+                            print(arr)
+
+    📌 2. 1D Array
+                    arr = np.array([10, 20, 30])
+                    print(arr)
+
+    📌 3. 2D Array (Matrix) ⭐
+                            arr = np.array([
+                                [1, 2, 3],
+                                [4, 5, 6]
+                            ])
+
+                            print(arr)
+
+                                 👉 এটা table এর মতো (Pandas এর base)
+
+    📌 4. Array Properties
+                            arr = np.array([[1,2,3],[4,5,6]])
+
+                            print(arr.shape)   # (row, column)
+                            print(arr.ndim)    # dimension
+                            print(arr.size)    # total element
+    📌 5. Special Array
+                    👉 Zero array
+                    np.zeros((2,3))
+
+                    👉 Ones array
+                    np.ones((2,2))
+
+                    👉 Range array
+                    np.arange(0, 10)
+
+    🎯 Mini Practice
+                    import numpy as np
+
+                    arr = np.array([[1,2],[3,4]])
+
+                    print(arr.shape)
+                    print(arr.ndim)
+                    print(arr.size)
+    
+    📌 Summary
+                NumPy = fast math library
+                Array = list এর powerful version
+                1D, 2D array
+                shape, size, dimension
