@@ -8,12 +8,12 @@ This repository contains my step-by-step learning of **NumPy** from basic to adv
 
 | Module | Topic |
 |--------|------|
-| Module1.1 |(Module1.1/) Introduction to NumPy |
-| Module1.2 |(Module1.2/)  Array Indexing & Slicing |
-| Module1.3 |(Module1.3/)  Math Operations |
-| Module1.4 |(Module1.4/)  Random & Data Simulation |
-| Module1.5 |(Module1.5/)  Reshape & Array Operations |
-| Module1.6 |(Module1.6/)  Linear Algebra |
+[ Module1.1 ](Module1.1/) Introduction to NumPy |
+[ Module1.2 ](Module1.2/)  Array Indexing & Slicing |
+[ Module1.3 ](Module1.3/)  Math Operations |
+[ Module1.4 ](Module1.4/)  Random & Data Simulation |
+[ Module1.5 ](Module1.5/)  Reshape & Array Operations |
+[ Module1.6 ](Module1.6/)  Linear Algebra |
 
 
 
