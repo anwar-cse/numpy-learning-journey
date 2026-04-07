@@ -1,9 +1,9 @@
- Array Indexing + Slicing 
+ #  Array Indexing + Slicing 
 
 
-    📌 1. Indexing (Single Value Access)
+     1. Indexing (Single Value Access)
 
-                👉 1D Array
+                 1D Array
                         import numpy as np
 
                         arr = np.array([10, 20, 30, 40])
@@ -11,7 +11,7 @@
                         print(arr[0])   # 10
                         print(arr[2])   # 30
 
-                👉 2D Array ⭐
+                 2D Array 
                         arr = np.array([
                             [1, 2, 3],
                             [4, 5, 6]
@@ -20,24 +20,24 @@
                         print(arr[0][1])   # 2
                         print(arr[1][2])   # 6
 
-                👉  short way:
+                  short way:
 
                         print(arr[0, 1])   # 2
 
-    📌 2. Slicing (Range Access)
-                👉 1D slicing
+     2. Slicing (Range Access)
+                 1D slicing
                         arr = np.array([10, 20, 30, 40, 50])
 
                         print(arr[1:4])   # [20 30 40]
 
-                👉 format:
+                 format:
                         [start : end]
 
-                👉 Step slicing
+                 Step slicing
                         print(arr[0:5:2])   # [10 30 50]
-                        👉 2 step করে নিবে
+                         2 step করে নিবে
 
-    📌 3. 2D Array Slicing ⭐
+     3. 2D Array Slicing 
                             arr = np.array([
                                 [1, 2, 3],
                                 [4, 5, 6],
@@ -47,21 +47,21 @@
                             # row 0-1, column 1-2
                             print(arr[0:2, 1:3])
 
-                            👉 Output:
+                             Output:
                                     [[2 3]
                                     [5 6]]
-    📌 4. Full row / column
-                        👉 Full row
+     4. Full row / column
+                         Full row
                              print(arr[1, :])   # 2nd row
-                        👉 Full column
+                         Full column
                              print(arr[:, 1])   # 2nd column
-    📌 5. Negative Index
+     5. Negative Index
                 arr = np.array([10, 20, 30, 40])
 
                 print(arr[-1])   # 40
                 print(arr[-2])   # 30
 
-    🎯 Mini Practice
+     Mini Practice
                 import numpy as np
 
                 arr = np.array([
@@ -74,12 +74,12 @@
                 print(arr[:,2])     # column
                 print(arr[1:3,0:2]) # slice
 
-    ⚠️ Important Tips
+     Important Tips
                 2D array = [row, column]
                 slicing end index include হয় না
                 : মানে সব
 
-    📌 Summary
+     Summary
             indexing → single value
             slicing → range
             [row, col] format
