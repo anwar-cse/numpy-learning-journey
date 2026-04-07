@@ -17,7 +17,8 @@
                 import numpy as np
 
 #     1. Array কি?
-             Array = list এর advanced version (fast + powerful)
+
+     Array = list এর advanced version (fast + powerful)
 
      List vs NumPy Array
                             import numpy as np
