@@ -1,24 +1,24 @@
-Linear Algebra (Dot Product, Matrix Multiplication)
+# Linear Algebra (Dot Product, Matrix Multiplication)
 
-    📌 কেন দরকার?
+     কেন দরকার?
 
-    👉 ML model (Regression, Neural Network) সবই matrix calculation
-    👉 তাই এটা বুঝা খুব important 
+     ML model (Regression, Neural Network) সবই matrix calculation
+     তাই এটা বুঝা খুব important 
 
-    📌 1. Dot Product ⭐
+     1. Dot Product 
 
-            👉 দুইটা array multiply করে sum করা
+             দুইটা array multiply করে sum করা
 
                     import numpy as np
                     a = np.array([1,2,3])
                     b = np.array([4,5,6])
                     print(np.dot(a,b))
 
-            👉 Calculation:
+             Calculation:
 
             (1×4) + (2×5) + (3×6) = 32
 
-    📌 2. Matrix Multiplication ⭐
+     2. Matrix Multiplication 
                 a = np.array([
                     [1,2],
                     [3,4]
@@ -33,14 +33,14 @@ Linear Algebra (Dot Product, Matrix Multiplication)
 
                 print(result)
 
-            👉 Output:
+             Output:
                     [[19 22]
                     [43 50]]
 
-            👉 Shortcut way
+             Shortcut way
                     print(a @ b)
 
-    📌 3. Transpose (row ↔ column)
+     3. Transpose (row ↔ column)
                 arr = np.array([
                     [1,2,3],
                     [4,5,6]
@@ -48,26 +48,26 @@ Linear Algebra (Dot Product, Matrix Multiplication)
 
                 print(arr.T)
 
-            👉 Output:
+             Output:
                         [[1 4]
                         [2 5]
                         [3 6]]
 
-    📌 4. Determinant
+     4. Determinant
                     arr = np.array([
                         [1,2],
                         [3,4]
                     ])
                     print(np.linalg.det(arr))
 
-    📌 5. Inverse Matrix
+     5. Inverse Matrix
                       print(np.linalg.inv(arr))
 
-    📌 6. Eigenvalues (Advanced - ML)
+     6. Eigenvalues (Advanced - ML)
                     values, vectors = np.linalg.eig(arr)
                     print(values)
 
-    🎯 Mini Practice
+     Mini Practice
                 import numpy as np
 
                 a = np.array([1,2,3])
@@ -80,13 +80,13 @@ Linear Algebra (Dot Product, Matrix Multiplication)
 
                 print(m1 @ m2)
 
-    ⚠️ Important Tips
+     Important Tips
                 Dot product → similarity / calculation
                 Matrix multiplication → ML model backbone
                 transpose → data reshape
                 inverse → equation solve
 
-    📌 Summary
+     Summary
     
             np.dot() → dot product
             @ / matmul() → matrix multiplication
