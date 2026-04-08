@@ -14,6 +14,8 @@ This repository contains my step-by-step learning of **NumPy** from basic to adv
 | [ Module1.4 ](Module1.4/) | Random & Data Simulation |
 | [ Module1.5 ](Module1.5/) | Reshape & Array Operations |
 | [ Module1.6 ](Module1.6/) | Linear Algebra |
+| [ Module1.7 ](Module1.7/) | Boolean Masking |
+| [ Module1.8 ](Module1.8/) | NaN / Missing Data Handling |
 
 
 
