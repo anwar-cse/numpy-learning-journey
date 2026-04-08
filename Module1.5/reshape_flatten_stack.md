@@ -1,0 +1,129 @@
+# Reshape + Flatten + Stack
+    1. Reshape (shape পরিবর্তন করা) 
+
+                Array এর shape change করতে
+                Reshape মানে হলো একটি array-এর structure (row × column) পরিবর্তন করা, কিন্তু data change হয় না।
+
+                    import numpy as np
+
+                    arr = np.array([1,2,3,4,5,6])
+
+                    new_arr = arr.reshape(2,3)
+
+                    print(new_arr)
+
+                 Output:
+                        [[1 2 3]
+                        [4 5 6]]
+
+                 Rule:
+                 total element same থাকতে হবে
+
+                            6 element → (2x3)  //correct 
+                            6 element → (3x3) //wrong
+                
+                 Automatic reshape (-1 ব্যবহার)
+
+                             Python নিজে dimension calculate করবে
+
+                                arr.reshape(3, -1)
+
+                             Output:
+                                [[1 2]
+                                [3 4]
+                                [5 6]]
+
+             
+                             এখানে -1 মানে → auto calculate
+
+     Summary 
+            reshape() দিয়ে array-এর shape change করা যায়
+            data change হয় না
+            total element same থাকতে হবে
+            -1 দিলে auto dimension set হয়
+
+     2. Flatten (1D বানানো)
+
+                 2D → 1D
+                 Flatten হলো array কে এক লাইনের 1D array এ convert করা, shape ignore করে সব element এক লাইনে নিয়ে আসে।
+
+                        arr = np.array([[1,2,3],[4,5,6]])
+                        flat = arr.flatten()
+                        print(flat)
+
+                 Output:
+                        [1 2 3 4 5 6]
+
+     3. Ravel (flatten এর মতো)
+                arr.ravel()
+
+                 fast version
+                 Ravel হলো flatten এর মতো, অর্থাৎ array কে 1D করে দেয়, কিন্তু fast এবং memory efficient
+
+     4. Stack (array combine করা) 
+             Stacking হলো একাধিক array কে একসাথে combine করে নতুন array বানানো।
+             Important: Stacking-এর জন্য array sizes compatible থাকতে হবে।
+                        এর মানে হলো:
+
+                        hstack করতে হলে → সব array এর row সংখ্যা same হতে হবে
+                        vstack করতে হলে → সব array এর column সংখ্যা same হতে হবে
+                        stack(axis=?) → নির্দিষ্ট axis-এ dimension match করতে হবে
+
+             Vertical Stack (উপর নিচে)
+                    a = np.array([1,2,3])
+                    b = np.array([4,5,6])
+
+                    print(np.vstack((a,b)))
+
+                        Note:   outer () → function call-এর জন্য
+                                inner (a, b) → tuple তৈরি করার জন্য
+                                
+                                vstack() একসাথে অনেকগুলো array নিতে পারে। তাই function-এর ভিতরে arrays গুলোকে group করে পাঠাতে হয়। এই group করার জন্য tuple বা list ব্যবহার করা হয়।
+
+
+                 Output:
+                        [[1 2 3]
+                        [4 5 6]]
+
+             Horizontal Stack (পাশে পাশে)
+                print(np.hstack((a,b)))
+
+                 Output:
+                        [1 2 3 4 5 6]
+
+     5. Split (array ভাগ করা)
+            arr = np.array([1,2,3,4,5,6])
+            print(np.split(arr, 3))
+
+             Output:
+                    [array([1,2]), array([3,4]), array([5,6])]
+
+
+     Mini Practice
+                import numpy as np
+
+                arr = np.array([1,2,3,4])
+
+                # reshape
+                print(arr.reshape(2,2))
+
+                # flatten
+                print(arr.reshape(2,2).flatten())
+
+                # stack
+                a = np.array([1,2])
+                b = np.array([3,4])
+
+                print(np.vstack((a,b)))
+
+     Important Tips
+            reshape ML এ data format ঠিক করতে use হয়
+            flatten → model input এ লাগে
+            stack → multiple data combine
+
+     Summary
+            reshape() → shape change
+            flatten() → 1D
+            vstack() → vertical
+            hstack() → horizontal
+            split() → ভাগ
